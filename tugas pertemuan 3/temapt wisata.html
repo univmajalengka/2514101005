@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisata Alam Pasir Paratz - Cipanas, Dukupuntang, Cirebon</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f2f9f5',
+                            100: '#e1f2e6',
+                            500: '#2d7a4c',
+                            600: '#23613c',
+                            700: '#1c4d30',
+                            800: '#173f28',
+                            900: '#123320',
+                        },
+                        accent: {
+                            500: '#e67e22',
+                            600: '#d35400',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-header {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- NAVBAR -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-header border-b border-slate-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 rounded-2xl bg-brand-500 flex items-center justify-center text-white shadow-lg shadow-brand-500/30 group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-mountain-sun text-2xl"></i>
+                    </div>
+                    <div>
+                        <span class="block font-bold text-xl text-slate-900 leading-none">Pasir Paratz</span>
+                        <span class="text-xs font-semibold text-brand-600 tracking-wider uppercase">Wisata Alam</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center gap-8 font-medium text-slate-600">
+                    <a href="#beranda" class="hover:text-brand-600 transition-colors">Beranda</a>
+                    <a href="#tentang" class="hover:text-brand-600 transition-colors">Tentang Kami</a>
+                    <a href="#galeri" class="hover:text-brand-600 transition-colors">Galeri</a>
+                    <a href="#paket" class="hover:text-brand-600 transition-colors">Paket Wisata</a>
+                    <a href="#lokasi" class="hover:text-brand-600 transition-colors">Kontak & Lokasi</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="#pemesanan" class="bg-brand-500 hover:bg-brand-600 text-white font-semibold px-6 py-3 rounded-xl shadow-lg shadow-brand-500/25 hover:shadow-brand-500/40 transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-ticket"></i> Pesan Tiket
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-slate-700 text-2xl p-2 focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 px-6 py-4 space-y-3">
+            <a href="#beranda" class="block font-medium text-slate-700 hover:text-brand-600 py-2">Beranda</a>
+            <a href="#tentang" class="block font-medium text-slate-700 hover:text-brand-600 py-2">Tentang Kami</a>
+            <a href="#galeri" class="block font-medium text-slate-700 hover:text-brand-600 py-2">Galeri</a>
+            <a href="#paket" class="block font-medium text-slate-700 hover:text-brand-600 py-2">Paket Wisata</a>
+            <a href="#lokasi" class="block font-medium text-slate-700 hover:text-brand-600 py-2">Kontak & Lokasi</a>
+            <a href="#pemesanan" class="block bg-brand-500 text-white text-center font-semibold py-3 rounded-xl shadow-md">Pesan Tiket</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="beranda" class="pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-b from-brand-50 via-slate-50 to-slate-50 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto space-y-6">
+                <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-100 text-brand-700 font-semibold text-sm">
+                    <i class="fa-solid fa-location-dot"></i> Desa Cipanas, Dukupuntang, Cirebon
+                </span>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                    Nikmati Keindahan <span class="text-brand-500">Wisata Alam</span> Pasir Paratz
+                </h1>
+                <p class="text-lg md:text-xl text-slate-600 leading-relaxed">
+                    Destinasi wisata alam terbaik di Cirebon untuk refreshing, camping, dan menikmati panorama alam yang memukau bersama keluarga dan teman.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                    <a href="#pemesanan" class="w-full sm:w-auto bg-brand-500 hover:bg-brand-600 text-white font-semibold px-8 py-4 rounded-xl shadow-xl shadow-brand-500/30 hover:shadow-brand-500/50 transition-all flex items-center justify-center gap-3">
+                        <i class="fa-solid fa-ticket text-lg"></i> Pesan Tiket Sekarang
+                    </a>
+                    <a href="#galeri" class="w-full sm:w-auto bg-white border-2 border-slate-200 text-slate-700 hover:bg-slate-50 font-semibold px-8 py-4 rounded-xl transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-images"></i> Lihat Galeri Foto
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TENTANG KAMI -->
+    <section id="tentang" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <span class="text-brand-600 font-bold uppercase tracking-wider text-sm">Tentang Destinasi</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Pesona Alam Asri Yang Sangat Indah</h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        Wisata Alam Pasir Paratz menyajikan pemandangan bukit dan perbukitan hijau yang menyejukkan mata. Terletak strategis di Desa Cipanas, lokasi ini cocok untuk tempat bersantai, menikmati matahari terbit/terbenam, hingga area berkemah.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 pt-2">
+                        <div class="p-4 bg-brand-50 rounded-2xl border border-brand-100">
+                            <i class="fa-solid fa-campground text-2xl text-brand-500 mb-2"></i>
+                            <h3 class="font-bold text-slate-900">Area Camping</h3>
+                            <p class="text-sm text-slate-600">Lahan berkemah luas & aman</p>
+                        </div>
+                        <div class="p-4 bg-brand-50 rounded-2xl border border-brand-100">
+                            <i class="fa-solid fa-camera text-2xl text-brand-500 mb-2"></i>
+                            <h3 class="font-bold text-slate-900">Spot Foto</h3>
+                            <p class="text-sm text-slate-600">Pemandangan instagramable</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-slate-100 p-8 rounded-3xl border border-slate-200 text-center space-y-4">
+                    <div class="w-20 h-20 bg-brand-500 text-white rounded-full flex items-center justify-center text-3xl mx-auto shadow-lg shadow-brand-500/30">
+                        <i class="fa-solid fa-tree"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900">Udara Segar & Suasana Asri</h3>
+                    <p class="text-slate-600">Nikmati ketenangan alam yang jauh dari kebisingan kota. Udara sejuk dan lanskap pemandangan yang indah menanti kedatangan Anda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERI SEKSION (FOTO TERSIMPAN PERMANEN LOKAL) -->
+    <section id="galeri" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+                <span class="text-brand-600 font-bold uppercase tracking-wider text-sm">Dokumentasi</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Galeri Foto Wisata</h2>
+                <p class="text-slate-600">Unggah dan kumpulkan foto-foto kegiatan Anda di Wisata Alam Pasir Paratz. Foto yang diunggah akan otomatis tersimpan.</p>
+            </div>
+
+            <!-- AREA UPLOAD FOTO MANDIRI -->
+            <div class="max-w-3xl mx-auto mb-10 bg-white border-2 border-dashed border-brand-300 hover:border-brand-500 rounded-2xl p-8 text-center transition-all shadow-sm">
+                <input type="file" id="image-input" multiple accept="image/*" class="hidden" onchange="handleImageUpload(event)">
+                <label for="image-input" class="cursor-pointer flex flex-col items-center justify-center gap-3">
+                    <div class="w-16 h-16 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                    </div>
+                    <div>
+                        <p class="text-lg font-bold text-slate-800">Klik untuk Mengunggah Foto Anda</p>
+                        <p class="text-sm text-slate-500">Pilih foto dari komputer / HP Anda (Otomatis tersimpan permanen)</p>
+                    </div>
+                    <span class="mt-2 bg-brand-500 hover:bg-brand-600 text-white font-semibold text-sm px-5 py-2.5 rounded-xl transition-all">
+                        Pilih File Foto
+                    </span>
+                </label>
+            </div>
+
+            <!-- GRID GALERI -->
+            <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Foto tersimpan akan dimuat di sini -->
+            </div>
+        </div>
+    </section>
+
+    <!-- PAKET WISATA -->
+    <section id="paket" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+                <span class="text-brand-600 font-bold uppercase tracking-wider text-sm">Pilihan Tiket</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Daftar Paket Wisata</h2>
+                <p class="text-slate-600">Pilih paket tiket kunjungan sesuai dengan kebutuhan liburan Anda.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Paket 1 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-3xl p-8 flex flex-col justify-between hover:shadow-xl transition-all">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider bg-brand-100 text-brand-700 px-3 py-1 rounded-full">Kunjungan Harian</span>
+                        <h3 class="text-2xl font-bold text-slate-900 mt-4 mb-2">Tiket Masuk Reguler</h3>
+                        <div class="text-3xl font-extrabold text-brand-600 mb-4">Rp 10.000 <span class="text-sm text-slate-500 font-normal">/ orang</span></div>
+                        <ul class="space-y-3 text-slate-600 text-sm mb-8">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Akses ke seluruh area spot foto</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Bebas fasilitas umum / toilet</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Area parkir kendaraan aman</li>
+                        </ul>
+                    </div>
+                    <a href="#pemesanan" onclick="selectPaket('Reguler')" class="block text-center bg-white border-2 border-brand-500 text-brand-600 hover:bg-brand-500 hover:text-white font-semibold py-3 rounded-xl transition-all">Pilih Paket</a>
+                </div>
+
+                <!-- Paket 2 -->
+                <div class="bg-brand-500 text-white rounded-3xl p-8 flex flex-col justify-between shadow-xl scale-105 relative">
+                    <span class="absolute -top-3 right-6 bg-accent-500 text-white font-bold text-xs uppercase px-3 py-1 rounded-full shadow-md">Favorit</span>
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider bg-brand-600 text-brand-100 px-3 py-1 rounded-full">Menginap</span>
+                        <h3 class="text-2xl font-bold mt-4 mb-2">Paket Camping</h3>
+                        <div class="text-3xl font-extrabold text-white mb-4">Rp 25.000 <span class="text-sm text-brand-200 font-normal">/ orang / malam</span></div>
+                        <ul class="space-y-3 text-brand-100 text-sm mb-8">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-accent-500"></i> Tiket masuk lokasi + area camping</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-accent-500"></i> Akses fasilitas air bersih & toilet 24 jam</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-accent-500"></i> Spot unggulan sunset & sunrise</li>
+                        </ul>
+                    </div>
+                    <a href="#pemesanan" onclick="selectPaket('Camping')" class="block text-center bg-white text-brand-700 hover:bg-brand-50 font-bold py-3 rounded-xl shadow-lg transition-all">Pilih Paket</a>
+                </div>
+
+                <!-- Paket 3 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-3xl p-8 flex flex-col justify-between hover:shadow-xl transition-all">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider bg-brand-100 text-brand-700 px-3 py-1 rounded-full">Kelompok</span>
+                        <h3 class="text-2xl font-bold text-slate-900 mt-4 mb-2">Paket Rombongan</h3>
+                        <div class="text-3xl font-extrabold text-brand-600 mb-4">Rp 8.000 <span class="text-sm text-slate-500 font-normal">/ orang (Min. 15 orang)</span></div>
+                        <ul class="space-y-3 text-slate-600 text-sm mb-8">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Diskon khusus rombongan</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Area santai khusus/gazebo</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Layanan pemandu lokal</li>
+                        </ul>
+                    </div>
+                    <a href="#pemesanan" onclick="selectPaket('Rombongan')" class="block text-center bg-white border-2 border-brand-500 text-brand-600 hover:bg-brand-500 hover:text-white font-semibold py-3 rounded-xl transition-all">Pilih Paket</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORM PEMESANAN TIKET -->
+    <section id="pemesanan" class="py-20 bg-brand-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl border border-slate-100 p-8 md:p-12">
+                <div class="text-center mb-8 space-y-2">
+                    <h2 class="text-3xl font-bold text-slate-900">Form Pemesanan Tiket</h2>
+                    <p class="text-slate-600">Isi formulir di bawah ini untuk memesan tiket via WhatsApp resmi</p>
+                </div>
+
+                <form id="ticket-form" onsubmit="sendWhatsApp(event)" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Nama Lengkap</label>
+                            <input type="text" id="nama" required placeholder="Masukkan nama Anda" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Nomor Telepon / WhatsApp</label>
+                            <input type="tel" id="telepon" required placeholder="083823742523" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Pilih Paket Wisata</label>
+                            <select id="paket-select" required onchange="calculateTotal()" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                                <option value="Reguler">Tiket Masuk Reguler (Rp 10.000)</option>
+                                <option value="Camping">Paket Camping (Rp 25.000)</option>
+                                <option value="Rombongan">Paket Rombongan (Rp 8.000)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Tanggal Kunjungan</label>
+                            <input type="date" id="tanggal" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">Jumlah Tiket / Orang</label>
+                        <input type="number" id="jumlah" min="1" value="1" required onchange="calculateTotal()" oninput="calculateTotal()" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                    </div>
+
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 flex justify-between items-center">
+                        <span class="font-bold text-slate-700">Estimasi Total Harga:</span>
+                        <span id="total-harga" class="text-2xl font-extrabold text-brand-600">Rp 10.000</span>
+                    </div>
+
+                    <button type="submit" class="w-full bg-brand-500 hover:bg-brand-600 text-white font-bold py-4 rounded-xl shadow-lg shadow-brand-500/30 transition-all flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-xl"></i> Kirim Pemesanan via WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAK & LOKASI -->
+    <section id="lokasi" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="space-y-6">
+                    <span class="text-brand-600 font-bold uppercase tracking-wider text-sm">Informasi Kontak</span>
+                    <h2 class="text-3xl font-bold text-slate-900">Hubungi & Kunjungi Kami</h2>
+                    <p class="text-slate-600">Kami siap melayani pertanyaan dan reservasi tiket Anda.</p>
+
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                            <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Alamat Lokasi</h4>
+                                <p class="text-slate-600 text-sm">Desa Cipanas, Kecamatan Dukupuntang, Kabupaten Cirebon, Jawa Barat</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                            <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Nomor Telepon / WhatsApp</h4>
+                                <p class="text-slate-600 text-sm">083823742523</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                            <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Email Resmi</h4>
+                                <p class="text-slate-600 text-sm">pasirparatz@.co.id</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Maps Embedding -->
+                <div class="rounded-3xl overflow-hidden shadow-lg border border-slate-200 h-[400px]">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.146200236402!2d108.3995874!3d-6.7520002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6ee2e1e3e7f4bd%3A0x8979db6a40c21345!2sDukupuntang%2C%20Cirebon%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <div class="flex items-center justify-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-brand-500 flex items-center justify-center text-white font-bold">
+                    <i class="fa-solid fa-mountain-sun"></i>
+                </div>
+                <span class="text-xl font-bold text-white">Pasir Paratz</span>
+            </div>
+            <p class="text-sm">Desa Cipanas, Kecamatan Dukupuntang, Kabupaten Cirebon</p>
+            <p class="text-xs text-slate-500 pt-4 border-t border-slate-800">&copy; 2026 Wisata Alam Pasir Paratz. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX PREVIEW -->
+    <div id="lightbox" class="fixed inset-0 bg-black/90 z-50 hidden flex items-center justify-center p-4">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white text-3xl"><i class="fa-solid fa-xmark"></i></button>
+        <img id="lightbox-img" src="" class="max-w-full max-h-[85vh] rounded-lg shadow-2xl">
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Toggle Mobile Menu
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Hitung Total Harga Tiket
+        function calculateTotal() {
+            const paket = document.getElementById('paket-select').value;
+            const jumlah = parseInt(document.getElementById('jumlah').value) || 1;
+            let harga = 10000;
+
+            if (paket === 'Camping') harga = 25000;
+            if (paket === 'Rombongan') harga = 8000;
+
+            const total = harga * jumlah;
+            document.getElementById('total-harga').innerText = 'Rp ' + total.toLocaleString('id-ID');
+        }
+
+        function selectPaket(namaPaket) {
+            document.getElementById('paket-select').value = namaPaket;
+            calculateTotal();
+        }
+
+        // Kirim WhatsApp
+        function sendWhatsApp(event) {
+            event.preventDefault();
+            const nama = document.getElementById('nama').value;
+            const telepon = document.getElementById('telepon').value;
+            const paket = document.getElementById('paket-select').value;
+            const tanggal = document.getElementById('tanggal').value;
+            const jumlah = document.getElementById('jumlah').value;
+            const total = document.getElementById('total-harga').innerText;
+
+            const text = `Halo Admin Wisata Alam Pasir Paratz,%0A%0ASaya ingin memesan tiket:%0A- Nama: ${nama}%0A- No. HP: ${telepon}%0A- Paket: ${paket}%0A- Tanggal: ${tanggal}%0A- Jumlah: ${jumlah} tiket%0A- Total Estimasi: ${total}%0A%0AMohon konfirmasinya. Terima kasih!`;
+            window.open(`https://wa.me/6283823742523?text=${text}`, '_blank');
+        }
+
+        // --- SISTEM PENYIMPANAN FOTO LOCALSTORAGE (PERMANEN DI BROWSER) ---
+        let savedImages = JSON.parse(localStorage.getItem('pasir_paratz_images')) || [];
+
+        // Muat gambar tersimpan saat halaman dibuka
+        window.addEventListener('DOMContentLoaded', () => {
+            renderGallery();
+        });
+
+        function renderGallery() {
+            const grid = document.getElementById('gallery-grid');
+            grid.innerHTML = '';
+
+            if (savedImages.length === 0) {
+                grid.innerHTML = `
+                    <div id="empty-gallery-msg" class="col-span-full text-center py-12 bg-white rounded-2xl border border-slate-200">
+                        <i class="fa-regular fa-images text-4xl text-slate-300 mb-3 block"></i>
+                        <p class="text-slate-600 font-medium">Belum ada foto yang diunggah.</p>
+                        <p class="text-sm text-slate-400">Pilih foto dari tombol di atas untuk menambah galeri secara tersimpan.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            savedImages.forEach((src, index) => {
+                const card = document.createElement('div');
+                card.className = "group relative overflow-hidden rounded-2xl shadow-md bg-white border border-slate-200 h-64";
+                card.innerHTML = `
+                    <img src="${src}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openLightbox('${src}')">
+                    <button onclick="deleteImage(${index})" class="absolute top-3 right-3 bg-red-600 text-white w-8 h-8 rounded-full flex items-center justify-center opacity-80 hover:opacity-100 shadow-md">
+                        <i class="fa-solid fa-trash text-xs"></i>
+                    </button>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Handle Upload Baru
+        function handleImageUpload(event) {
+            const files = event.target.files;
+            if (!files || files.length === 0) return;
+
+            Array.from(files).forEach((file) => {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const src = e.target.result;
+                    savedImages.push(src);
+                    try {
+                        localStorage.setItem('pasir_paratz_images', JSON.stringify(savedImages));
+                        renderGallery();
+                    } catch (err) {
+                        alert("Ukuran foto terlalu besar untuk disimpan secara permanen di browser ini. Coba foto dengan resolusi lebih kecil.");
+                    }
+                };
+                reader.readAsDataURL(file);
+            });
+        }
+
+        // Hapus Foto
+        function deleteImage(index) {
+            savedImages.splice(index, 1);
+            localStorage.setItem('pasir_paratz_images', JSON.stringify(savedImages));
+            renderGallery();
+        }
+
+        // Lightbox
+        function openLightbox(src) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox').classList.remove('hidden');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
